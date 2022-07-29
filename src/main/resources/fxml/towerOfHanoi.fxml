@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.towerofhanoi.ui.TowerOfHanoiController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <HBox prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="200.0" layoutX="95.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+                        <VBox fx:id="tower1VBox" alignment="BOTTOM_CENTER" layoutX="5.0" layoutY="14.0" prefHeight="200.0" prefWidth="190.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="10.0" layoutX="5.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="190.0" />
+                        <Button fx:id="tower1RightButton" layoutX="105.0" layoutY="236.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="🞂" />
+                        <Button fx:id="tower1ToTower3Button" layoutX="69.0" layoutY="236.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="3" />
+                        <Label layoutX="96.0" text="1">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="200.0" layoutX="95.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+                        <VBox fx:id="tower2VBox" alignment="BOTTOM_CENTER" layoutX="5.0" layoutY="14.0" prefHeight="200.0" prefWidth="190.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="10.0" layoutX="5.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="190.0" />
+                        <Button fx:id="tower2LeftButton" layoutX="69.0" layoutY="236.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="🞀" />
+                        <Button fx:id="tower2RightButton" layoutX="105.0" layoutY="236.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="🞂" />
+                        <Label layoutX="96.0" text="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="200.0" layoutX="95.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="10.0" />
+                        <VBox fx:id="tower3VBox" alignment="BOTTOM_CENTER" layoutX="5.0" layoutY="14.0" prefHeight="200.0" prefWidth="190.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b96826" height="10.0" layoutX="5.0" layoutY="214.0" stroke="BLACK" strokeType="INSIDE" width="190.0" />
+                        <Button fx:id="tower3LeftButton" layoutX="69.0" layoutY="238.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="🞀" />
+                        <Button fx:id="tower3ToTower1Button" layoutX="105.0" layoutY="238.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="26.0" text="1" />
+                        <Label layoutX="96.0" text="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <Pane prefHeight="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="424.0" layoutY="12.0" text="Minimum Moves: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="minMovesNumLabel" layoutX="566.0" layoutY="12.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitEvent" text="Exit" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                              <MenuItem fx:id="howToPlayMenuItem" mnemonicParsing="false" onAction="#openHowToPlayWindow" text="How To Play" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <Pane maxHeight="-Infinity" prefHeight="50.0">
+                     <children>
+                        <Label layoutX="264.0" layoutY="12.0" text="Moves: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="12.0" text="# of Disks: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="removeDiskButton" layoutX="126.0" layoutY="13.0" mnemonicParsing="false" onAction="#buttonEvent" text="▼" />
+                        <Label fx:id="totalMovesNumLabel" layoutX="326.0" layoutY="12.0" text="0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addDiskButton" layoutX="162.0" layoutY="13.0" mnemonicParsing="false" onAction="#buttonEvent" text="▲" />
+                        <Button fx:id="solveButton" layoutX="534.0" layoutY="13.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="55.0" text="Solve" />
+                        <Button fx:id="restartButton" layoutX="469.0" layoutY="13.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#buttonEvent" prefWidth="55.0" text="Restart" />
+                        <Label fx:id="diskNumLabel" layoutX="101.0" layoutY="12.0" text="0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+      <Pane fx:id="loadPane" layoutY="26.0" prefHeight="375.0" prefWidth="600.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00000040" height="407.0" layoutX="-27.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="657.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.towerofhanoi.ui.HowToPlayController">
+   <children>
+      <Pane prefWidth="400.0">
+         <children>
+            <Label layoutX="119.0" layoutY="14.0" text="Tower of Hanoi">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="10.0" layoutY="98.0" prefHeight="0.0" prefWidth="380.0" />
+            <Label layoutX="147.0" layoutY="59.0" text="How to Play">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="162.0" layoutY="112.0" text="Objective">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="126.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="240.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="25.0" layoutY="152.0" prefHeight="130.0" prefWidth="350.0" text="The objective of the game is move all disk from the first tower to the third tower. &#10;&#10;The disks must be in order by length with the bottommost disk being the longest and the topmost disk being the shortest." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="179.0" layoutY="292.0" text="Rules">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="144.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="225.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="25.0" layoutY="332.0" prefHeight="90.0" prefWidth="350.0" text="1. You can only move one disk at a time.&#10;&#10;2. The disk can only be moved to a tower that is either empty or has a larger topmost disk on it." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="167.0" layoutY="432.0" text="Controls">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="132.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="237.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../icon/tower-pixel-icon.png" />
+               </image>
+            </ImageView>
+            <TextArea editable="false" layoutX="25.0" layoutY="472.0" prefHeight="190.0" prefWidth="350.0" text="To move a disk, click on the arrow button under the tower to move its topmost disk to the tower the arrow is pointing toward.&#10;&#10;If you want to move a disk from the first tower to the third tower, click on the button label '3'.&#10;&#10;If you want to move a disk from the third tower to the first tower, click on the button label '1'." wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Separator layoutX="10.0" layoutY="681.0" prefHeight="0.0" prefWidth="380.0" />
+            <Button fx:id="closeButton" layoutX="175.0" layoutY="694.0" mnemonicParsing="false" onAction="#closeEvent" prefWidth="50.0" text="Close" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
