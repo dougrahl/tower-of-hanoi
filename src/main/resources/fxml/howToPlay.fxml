@@ -40,7 +40,7 @@
                   <Image url="@../icon/tower-pixel-icon.png" />
                </image>
             </ImageView>
-            <TextArea editable="false" layoutX="25.0" layoutY="152.0" prefHeight="130.0" prefWidth="350.0" text="The objective of the game is move all disk from the first tower to the third tower. &#10;&#10;The disks must be in order by length with the bottommost disk being the longest and the topmost disk being the shortest." wrapText="true">
+            <TextArea editable="false" layoutX="25.0" layoutY="152.0" prefHeight="130.0" prefWidth="350.0" text="The objective of the game is move all disks from the first tower to the third tower. &#10;&#10;The disks must be in order by length with the bottommost disk being the longest and the topmost disk being the shortest." wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Image url="@../icon/tower-pixel-icon.png" />
                </image>
             </ImageView>
-            <TextArea editable="false" layoutX="25.0" layoutY="332.0" prefHeight="90.0" prefWidth="350.0" text="1. You can only move one disk at a time.&#10;&#10;2. The disk can only be moved to a tower that is either empty or has a larger topmost disk on it." wrapText="true">
+            <TextArea editable="false" layoutX="25.0" layoutY="332.0" prefHeight="90.0" prefWidth="350.0" text="1. You can only move one disk at a time.&#10;&#10;2. A disk can only be moved to a tower that is either empty or has a larger topmost disk on it." wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
