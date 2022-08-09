@@ -103,7 +103,7 @@ public class TowerOfHanoiController implements Initializable {
         switch(buttonId) {
             case "removeDiskButton":
                 if (gameController.getNumDisks() > minNumDisks) {
-                    gameController.removeDisk();
+                    gameController.removeDisk(0);
                     uiController.removeDiskUI();
                     gameController.setNumMinMoves(gameController.getNumDisks());
                     restartGame();
@@ -111,7 +111,7 @@ public class TowerOfHanoiController implements Initializable {
                 return;
             case "addDiskButton":
                 if (gameController.getNumDisks() < maxNumDisks) {
-                    gameController.addDisk();
+                    gameController.addDisk(0);
                     uiController.addDiskUI();
                     gameController.setNumMinMoves(gameController.getNumDisks());
                     restartGame();
