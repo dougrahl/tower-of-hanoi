@@ -42,15 +42,17 @@ public class GameController {
         }
     }
 
-    public void addDisk() {
+    public void addDisk(int tower) {
         Disk disk = new Disk(numDisks);
-        towers.get(0).addDisk(disk);
+        towers.get(tower).addDisk(disk);
         numDisks += 1;
     }
 
-    public void removeDisk() {
-        towers.get(0).popDisk();
-        numDisks -= 1;
+    public void removeDisk(int tower) {
+        if (towers.get(tower).getTowerSize() > 0) {
+            towers.get(tower).popDisk();
+            numDisks -= 1;
+        }
     }
 
     public void moveDisk(int fromTowerId, int toTowerId) {
@@ -74,9 +76,10 @@ public class GameController {
         return false;
     }
 
-    private void clearTowers() {
+    public void clearTowers() {
         for (Map.Entry<Integer, Tower> tower: towers.entrySet()) {
             tower.getValue().clearTower();
+            numDisks = 0;
         }
     }
 
@@ -86,8 +89,11 @@ public class GameController {
     }
 
     public boolean isGameOver() {
-        if (towers.get(2).getTowerSize() == numDisks && towers.get(2).getTowerDisks().peek().getDiskId() == numDisks - 1) {
-            return true;
+        if (numDisks != 0) {
+            if (towers.get(2).getTowerSize() == numDisks &&
+                    towers.get(2).getTowerDisks().peek().getDiskId() == numDisks - 1) {
+                return true;
+            }
         }
         return false;
     }
